@@ -8,8 +8,11 @@ This project demonstrates that it is possible to re-produce a WordPress theme id
 
 Based on version v1.3 of the theme "Twenty Sixteen" released on August 15, 2016.
 An official theme of WordPress.org (Automattic).
+
 Https://codex.wordpress.org/Twenty_Sixteen_Theme_Changelog
+
 Https://srd.wordpress.org/themes/twentysixteen/
+
 Https://github.com/WordPress/twentysixteen
 
 A Pinegrow WordPress Starter Theme is useful for starting a WordPress theme with Pinegrow, you save time, avoid errors, learn faster, understand how to reproduce an official theme.
