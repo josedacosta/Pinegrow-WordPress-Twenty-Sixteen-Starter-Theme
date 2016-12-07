@@ -1,0 +1,53 @@
+<html wp-site wp-site-master-page="index.html">
+    <body>
+        <div wp-site-content>
+            <section id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    <div wp-loop wp-loop-empty-text-wrapper="<?php get_template_part( 'template-parts/content', 'none' ); ?>">
+                        <header class="page-header">
+                            <h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentysixteen' ), '<span>' . esc_html( get_search_query() ) . '</span>' ); ?></h1>
+                        </header>
+                        <div wp-loop-item data-pgc-edit="part[wp-include-template-part-set, no_content]" wp-include-template-part wp-include-template-part-slug="template-parts/content" wp-loop-show-empty-text="false" wp-include-template-part-name="search">
+                            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-pgc-save-partial="template-parts/content">
+                                <header class="entry-header">
+                                    <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+                                </header>
+                                <?php twentysixteen_post_thumbnail(); ?>
+                                <?php twentysixteen_excerpt(); ?>
+                                <?php if ( 'post' === get_post_type() ) : ?>
+                                    <footer class="entry-footer">
+                                        <?php twentysixteen_entry_meta(); ?>
+                                        <?php
+				edit_post_link(
+					sprintf(
+						__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+						get_the_title()
+					),
+					'<span class="edit-link">',
+					'</span>'
+				);
+			?>
+                                    </footer>
+                                <?php else : ?>
+                                    <?php
+			edit_post_link(
+				sprintf(
+					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+					get_the_title()
+				),
+				'<footer class="entry-footer"><span class="edit-link">',
+				'</span></footer>'
+			);
+		?>
+                                <?php endif; ?>
+                            </article>
+                        </div>
+                        <div wp-post-navigation wp-pagination-prev-text="array( 'prev_text' => __( 'Previous page', 'twentysixteen' ), 'next_text' => __( 'Next page', 'twentysixteen' ), 'before_page_number' => '<span class=&quot;meta-nav screen-reader-text&quot;>' . __( 'Page', 'twentysixteen' ) . ' </span>', )">
+</div>
+                    </div>
+                </main>
+            </section>
+            <div wp-get-sidebar></div>
+        </div>
+    </body>
+</html>

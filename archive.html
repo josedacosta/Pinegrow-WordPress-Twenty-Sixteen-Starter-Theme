@@ -1,0 +1,23 @@
+<html wp-site wp-site-master-page="index.html">
+    <body>
+        <div wp-site-content>
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main" role="main">
+                    <div wp-loop wp-loop-show-empty-text="false">
+                        <header class="page-header">
+                            <?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+                            <?php the_archive_description( '<div class="taxonomy-description">', '</div>' ); ?>
+                        </header>
+                        <div wp-loop-item data-pgc-edit="part[wp-include-template-part-set, no_content]" wp-include-template-part wp-include-template-part-slug="template-parts/content" wp-loop-show-empty-text="false" wp-include-template-part-name="get_post_format()">
+</div>
+                        <div wp-post-navigation wp-pagination-prev-text="array( 'prev_text' => __( 'Previous page', 'twentysixteen' ), 'next_text' => __( 'Next page', 'twentysixteen' ), 'before_page_number' => '<span class=&quot;meta-nav screen-reader-text&quot;>' . __( 'Page', 'twentysixteen' ) . ' </span>', )">
+</div>
+                    </div>
+                    <div wp-else-if wp-include-template-part wp-include-template-part-slug="template-parts/content" wp-include-template-part-name="none">
+</div>
+                </main>
+            </div>
+            <div wp-get-sidebar></div>
+        </div>
+    </body>
+</html>

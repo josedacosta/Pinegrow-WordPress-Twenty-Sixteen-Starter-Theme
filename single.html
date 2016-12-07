@@ -1,0 +1,56 @@
+<html wp-site wp-site-master-page="index.html">
+    <head>
+        <link rel='stylesheet' id='twentysixteen-style-css' href='style.css' type='text/css' media='all' />
+    </head>
+    <body>
+        <div id="page" class="site">
+            <div class="site-inner">
+                <div id="content" class="site-content" wp-site-content>
+                    <div id="primary" class="content-area">
+                        <main id="main" class="site-main" role="main">
+                            <div wp-loop data-pgc-edit="part[wp-include-template-part-set, no_content]" wp-include-template-part wp-include-template-part-slug="template-parts/content" wp-loop-show-empty-text="false" wp-include-template-part-name="single">
+</div>
+                            <div wp-loop-add wp-comments-template wp-if-comments-open wp-if-get-comments-number></div>
+                            <div wp-loop-add wp-post-navigation wp-pagination-prev-text="array( 'prev_text' => _x( '<span class=&quot;meta-nav&quot;>Published in</span><span class=&quot;post-title&quot;>%title</span>', 'Parent post link', 'twentysixteen' ), )" wp-if-is-singular="attachment">
+</div>
+                            <div wp-loop-add wp-else-if wp-if-is-singular="post" wp-post-navigation wp-pagination-prev-text="array( 'next_text' => '<span class=&quot;meta-nav&quot; aria-hidden=&quot;true&quot;>' . __( 'Next', 'twentysixteen' ) . '</span> ' . '<span class=&quot;screen-reader-text&quot;>' . __( 'Next post:', 'twentysixteen' ) . '</span> ' . '<span class=&quot;post-title&quot;>%title</span>', 'prev_text' => '<span class=&quot;meta-nav&quot; aria-hidden=&quot;true&quot;>' . __( 'Previous', 'twentysixteen' ) . '</span> ' . '<span class=&quot;screen-reader-text&quot;>' . __( 'Previous post:', 'twentysixteen' ) . '</span> ' . '<span class=&quot;post-title&quot;>%title</span>', )">
+</div>
+                        </main>
+                        <div wp-get-sidebar="content-bottom" wp-template-part wp-template-part-slug="sidebar-content-bottom" wp-template-part-content>
+                            <?php if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) ) { return; } ?>
+                            <aside id="content-bottom-widgets" class="content-bottom-widgets" role="complementary">
+                                <div class="widget-area" wp-dynamic-sidebar="sidebar-2" wp-register-sidebar="Content Bottom 1" wp-register-sidebar-id="sidebar-2" wp-register-sidebar-description="Appears at the bottom of the content on posts and pages." wp-register-sidebar-before="<section id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</section>" wp-register-sidebar-before-title="<h2 class=&quot;widget-title&quot;>" wp-register-sidebar-after-title="</h2>">
+                                    <section id="pages-2" class="widget widget_pages">
+                                        <h2 class="widget-title">Content Bottom 1</h2> 
+                                        <ul>
+                                            <li class="page_item page-item-30">
+                                                <a href="http://wordpress.local/?page_id=30">Title Page 1</a>
+                                            </li>
+                                            <li class="page_item page-item-32">
+                                                <a href="http://wordpress.local/?page_id=32">Title Page 2</a>
+                                            </li>
+                                        </ul>
+                                    </section>                                     
+                                </div>
+                                <div class="widget-area" wp-dynamic-sidebar="sidebar-3" wp-register-sidebar="Content Bottom 2" wp-register-sidebar-id="sidebar-3" wp-register-sidebar-description="Appears at the bottom of the content on posts and pages." wp-register-sidebar-before="<section id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</section>" wp-register-sidebar-before-title="<h2 class=&quot;widget-title&quot;>" wp-register-sidebar-after-title="</h2>">
+                                    <section id="pages-3" class="widget widget_pages">
+                                        <h2 class="widget-title">Content Bottom 2</h2> 
+                                        <ul>
+                                            <li class="page_item page-item-30">
+                                                <a href="http://wordpress.local/?page_id=30">Title Page 1</a>
+                                            </li>
+                                            <li class="page_item page-item-32">
+                                                <a href="http://wordpress.local/?page_id=32">Title Page 2</a>
+                                            </li>
+                                        </ul>
+                                    </section>                                     
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                    <div wp-get-sidebar></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
